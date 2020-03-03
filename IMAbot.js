@@ -127,7 +127,6 @@ client.on('message', message => {
             message.reply("I am the IMAbot, the omniscient and the omnipotent.")
         }
 
-
         // provide reference
         if ((msg.includes("arc") || msg.includes("curve")) && msg.includes("how") && msg.includes("processing")) {
             message.reply("Have a look at: https://processing.org/reference/arc_.html")
@@ -138,8 +137,8 @@ client.on('message', message => {
     /* these message repliers might need to be updated once in a while */
 
     if (msg.includes("fellow") && msg.includes("office hour") || msg.includes("fellow") && msg.includes("studio hour") || msg.includes("fellow schedule") || msg.includes("fellows schedule") || msg.includes("fellows' schedule")) {
-        const fellowSchedule = new Discord.Attachment("https://gunn.pausd.org/sites/default/files/19-20_bell_schedule_-_color_0.jpg")
-        message.reply("Are you looking for:" + fellowSchedule)
+        const fellowSchedule = "https://gunn.pausd.org/sites/default/files/19-20_bell_schedule_-_color_0.jpg";
+        message.channel.send("Are you looking for:",  {files: [fellowSchedule]});
     }
 
     if (msg.includes("ixlab") && msg.includes("office hour") || msg.includes("interaction lab") && msg.includes("office hour") || msg.includes("ixlab schedule") || msg.includes("interaction lab schedule")) {
