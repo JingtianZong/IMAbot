@@ -5,7 +5,8 @@
     "main": "IMAbot.js",
     "dependencies": {
         "discord.js": "^11.4.2",
-        "now": "^17.0.4"
+        "now": "^17.0.4",
+        "secure-env": "^1.2.0"
     },
     "devDependencies": {},
     "scripts": {

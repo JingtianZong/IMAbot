@@ -1,9 +1,10 @@
+let secureEnv = require('secure-env');
+global.env = secureEnv({secret:'i4mn0tar0b0t'});
+
 const Discord = require('discord.js')
 const client = new Discord.Client()
 var imaServer = null;
 const http = require('http');
-
-
 
 http.createServer((req, res) => {
 res.writeHead(200, {
@@ -251,7 +252,7 @@ client.on('message', message => {
 
 })
 
-client.login('NjgyODQ4ODc0OTkzNjgwNDA3.XljAog.Ahg5w5qGhwyjdci2RBbtpTNPHrk')
+client.login(global.env.DISCORD_TOKEN)
 
 
 
