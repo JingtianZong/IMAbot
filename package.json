@@ -1,0 +1,17 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "IMAbot.js",
+    "dependencies": {
+        "discord.js": "^11.4.2",
+        "now": "^17.0.4"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node IMAbot.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
