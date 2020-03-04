@@ -137,7 +137,7 @@ client.on('message', message => {
     /* these message repliers might need to be updated once in a while */
 
     if (msg.includes("fellow") && msg.includes("office hour") || msg.includes("fellow") && msg.includes("studio hour") || msg.includes("fellow schedule") || msg.includes("fellows schedule") || msg.includes("fellows' schedule")) {
-        const fellowSchedule = "fellow_studio_hour_sp2020.png";
+        const fellowSchedule = new Discord.Attachment("fellow_studio_hour_sp2020.png");
         message.channel.send("Are you looking for:",  {files: [fellowSchedule]});
     }
 
