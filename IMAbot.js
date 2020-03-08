@@ -119,6 +119,10 @@ client.on('message', message => {
             message.reply(npMessage[chosen])
         }
 
+        if (msg.includes("food")) {
+            message.reply("NO food in the studio!!!!1111")
+        }
+
         if (msg.includes("help") || msg.includes("doesn't work") || msg.includes("what should i do") || msg.includes("do you know how")) {
             message.reply("Maybe you are looking for a human fellow. Is there one in the 826 Studio?")
         }
