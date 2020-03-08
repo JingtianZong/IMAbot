@@ -104,7 +104,7 @@ client.on('message', message => {
 
 
     /* reply on mention, or when called by name, or in dm */
-    if (message.isMentioned(client.user) || msg.includes("imabot") || (message => channel => guild_id === NULL)) {
+    if (message.isMentioned(client.user) || msg.includes("imabot")) {
         if (msg.includes("who's the best fellow") || msg.includes("who's the best ima fellow") || msg.includes("who is the best fellow") || msg.includes("who is the best ima fellow")) {
             message.reply("It's the IMAbot.")
         }
