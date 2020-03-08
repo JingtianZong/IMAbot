@@ -113,10 +113,14 @@ client.on('message', message => {
             message.reply("I'm not your Siri.")
         }
 
-        if (msg.includes("thank")) {
+        if (msg.includes("thank") && msg.includes("bot")) {
             var npMessage = ["You are welcome.", "No problem.", "np", "Np", "np!", "Np.", ":)", "Keep up the good work!", "I'm always here in the Virual Studio."];
             var chosen = Math.floor(Math.random() * npMessage.length);
             message.reply(npMessage[chosen])
+        }
+
+        if (msg.includes("food")) {
+            message.reply("NO food in the studio!!!!1111")
         }
 
         if (msg.includes("help") || msg.includes("doesn't work") || msg.includes("what should i do") || msg.includes("do you know how")) {
