@@ -61,8 +61,8 @@ client.on('message', message => {
     var msg = message.content.toLowerCase();
 
 
-    // kick start role assigner
-    if (!message.channel.guild_id) {
+    // kick start role assigner when DM sent
+    if (message.channel.type === 1) {
        console.log(message.channel.lastMessage.content)
         var messagerID = String(message.author.id);
         var thisMember = imaServer.members.get(messagerID)
