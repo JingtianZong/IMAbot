@@ -62,7 +62,7 @@ client.on('message', message => {
 
 
     // kick start role assigner
-    if (message => channel => guild_id === NULL) {
+    if (!message.channel.guild_id) {
        console.log(message.channel.lastMessage.content)
         var messagerID = String(message.author.id);
         var thisMember = imaServer.members.get(messagerID)
