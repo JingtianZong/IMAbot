@@ -60,10 +60,10 @@ client.on('message', message => {
     //read messages: case insensitive
     var msg = message.content.toLowerCase();
 
+    console.log(typeof(message.channel));
 
     // kick start role assigner when DM sent
     if (!message.channel.guild_id === null) {
-       console.log(typeof(message.channel));
         var messagerID = String(message.author.id);
         var thisMember = imaServer.members.get(messagerID)
         var studentRole = imaServer.roles.find(role => role.name === "Student")
@@ -100,7 +100,7 @@ client.on('message', message => {
         message.reply("I'm here. How can I help?")
     }
 
-    if (msg.match('/f+oo+d+/g')) {
+    if (msg.match(/f+oo+d+/g)) {
         message.reply("NO food in the studio!!!!1111")
     }
 
