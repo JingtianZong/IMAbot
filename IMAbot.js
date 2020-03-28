@@ -60,10 +60,8 @@ client.on('message', message => {
     //read messages: case insensitive
     var msg = message.content.toLowerCase();
 
-    console.log(typeof(message.channel));
-
     // kick start role assigner when DM sent
-    if (!message.channel.guild_id === null) {
+    if (message.channel.constructor.name === 'DMChannel') {
         var messagerID = String(message.author.id);
         var thisMember = imaServer.members.get(messagerID)
         var studentRole = imaServer.roles.find(role => role.name === "Student")
