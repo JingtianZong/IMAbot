@@ -12,7 +12,7 @@ res.writeHead(200, {
 });
     res.write('Hey');
     res.end();
-}).listen(4000);
+}).listen(4003);
 
 
 
@@ -62,8 +62,8 @@ client.on('message', message => {
 
 
     // kick start role assigner when DM sent
-    if (message.channel.type === 1) {
-       console.log(message.channel.lastMessage.content)
+    if (!message.channel.guild_id === null) {
+       console.log(typeof(message.channel));
         var messagerID = String(message.author.id);
         var thisMember = imaServer.members.get(messagerID)
         var studentRole = imaServer.roles.find(role => role.name === "Student")
@@ -100,7 +100,7 @@ client.on('message', message => {
         message.reply("I'm here. How can I help?")
     }
 
-    if (msg.includes("food")) {
+    if (msg.match('/f+oo+d+/g')) {
         message.reply("NO food in the studio!!!!1111")
     }
 
